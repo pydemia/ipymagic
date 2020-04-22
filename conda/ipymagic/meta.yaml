@@ -1,5 +1,5 @@
 {% set name = "ipymagic" %}
-{% set version = "0.1" %}
+{% set version = "0.2" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 369b8313a5bd16f7943078d890d98b0ccf934703940d90b5f1425972d126d73e
+  sha256: 6107abb1188e2372f83b285b7c47087bebebd9fe3594f9b5717bc3e45c37e444
 
 build:
   number: 0

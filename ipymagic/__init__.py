@@ -52,6 +52,9 @@ class EnvScriptMagics(ScriptMagics):
 @magics_class
 class EnvRunMagics(PackagingMagics):
 
+    def __init__(self, *args, **kwargs):
+        super(PackagingMagics, self).__init__(*args, **kwargs)
+
     @line_magic("python")
     def python(self, line):
         self.shell.system(' '.join([sys.executable, line]))
