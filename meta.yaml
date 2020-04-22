@@ -1,0 +1,40 @@
+{% set name = "ipymagic" %}
+{% set version = "0.1" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 369b8313a5bd16f7943078d890d98b0ccf934703940d90b5f1425972d126d73e
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+
+requirements:
+  host:
+    - ipython >=7.12.0
+    - pip
+    - python
+  run:
+    - ipython >=7.12.0
+    - python
+
+test:
+  imports:
+    - ipymagic
+
+about:
+  home: https://ipymagic.readthedocs.io/en/latest/index.html
+  license: MIT
+  license_family: MIT
+  license_file: 
+  summary: run python with virtualenv in 'ipython'
+  doc_url: 
+  dev_url: 
+
+extra:
+  recipe-maintainers:
+    - pydemia
