@@ -26,6 +26,8 @@ from IPython.core.magic import Magics, magics_class, line_magic
 #%alias_magic python run
 
 # ------------------------------------------- #
+os.environ['PYTHONPATH'] = sys.executable
+
 OLD_PATH = os.environ['PATH']
 ENV_PATH = os.path.dirname(sys.executable)
 NEW_PATH = ":".join([ENV_PATH, OLD_PATH])

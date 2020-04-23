@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm -r ipymagic && \
+rm -rf ipymagic && \
 conda skeleton pypi ipymagic && \
 conda build ipymagic
 
